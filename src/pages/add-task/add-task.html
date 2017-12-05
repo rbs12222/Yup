@@ -1,0 +1,52 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Add Task</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item class="input-box">
+    <ion-input placeholder="Task"></ion-input>
+  </ion-item>
+  <ion-item class="input-box">
+    <ion-textarea placeholder="Task Notes.."></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label>Category</ion-label>
+    <ion-select>
+      <ion-option value="Groceries">Groceries</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Status</ion-label>
+    <ion-select>
+      <ion-option value="Active">Active</ion-option>
+      <ion-option value="Completed">Completed</ion-option>
+      <ion-option value="Canceled">Canceled</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Due Date</ion-label>
+    <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
+
+  <div class="savecancelbutton">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button>Save</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button>Cancel</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+</ion-content>
